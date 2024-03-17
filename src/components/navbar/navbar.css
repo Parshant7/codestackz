@@ -1,0 +1,79 @@
+#brandName{
+    transition: 1s;
+}
+
+#brandName:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.ltblue{
+    background-color: #3652AD;
+}
+
+.navButton{
+    border: 2px solid white;
+    border-radius: 0px;
+    color: white;
+}
+.navButton:hover{
+    background-color: white;
+    color: black;
+}
+
+.navLink{
+    color: white;
+}
+.navLink:hover{
+    color: white;
+    font-weight: bold;
+}
+/* .navLink:after{
+    color: red;
+} */
+
+.servicesDropdownDiv{
+    background-color: grey;
+}
+
+@media screen and (max-width: 1199px) {
+    .navLink{
+        color: white;
+        padding: 15px;
+        padding-left: 30px;
+    }
+    .navLink:hover{
+        color: black;
+        font-weight: bold;
+    }
+
+    .custombg{
+     
+        background-color:#7e6ba4;
+        margin-bottom: 1px;
+        font-size: 20px;
+    }
+    .custombg:hover{
+        background-color: white;
+    }
+    .customCanvas{
+        background-color: grey;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .xxsHide{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .servicesDropdownDiv{
+        background-color: grey;
+        padding: 25px;
+        width: fit-content;
+        min-width: 18rem;
+        font-size: 16px;
+
+    }
+}
