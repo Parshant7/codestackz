@@ -4,7 +4,7 @@ import ContactusForm from './../components/form/contactus'
 
 const Home = () => {
 
-  // document.title="Homerr | codestackz.in"
+  document.title="Home | codestackz.in"
 
   return (
     <>

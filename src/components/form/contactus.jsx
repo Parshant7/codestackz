@@ -71,7 +71,7 @@ const ContactusForm = () => {
       return;
     }
     else if (!emailRegex.test(email)) {
-      setInputErr(prevState => ({ ...prevState, email: "Please Enter Correct" }));
+      setInputErr(prevState => ({ ...prevState, email: "Please enter correct" }));
       emptyErr();
       return;
     }
