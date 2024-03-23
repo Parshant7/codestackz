@@ -119,7 +119,7 @@ const ContactusForm = () => {
   return (
     <>
       <section>
-        <div className="text-center p-4 letConnectHeading">
+        <div className="text-center p-4 pb-2 pb-sm-4 letConnectHeading">
           <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Lets Connect</h1>
         </div>
 

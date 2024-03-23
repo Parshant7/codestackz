@@ -9,7 +9,6 @@ function App() {
       <div style={{ overflow: "hidden" }}>
 
         <GetRoutes />
-      <div>hell</div>
       </div>
     </>
   )

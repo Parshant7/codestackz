@@ -14,3 +14,14 @@
     color:  white;
     
 }
+
+@media screen and (min-width:1390px) {
+    .techCard{
+        padding: 45px 110px;
+    }
+}
+@media screen and (min-width:1580px) {
+    .techCard{
+        padding: 45px 130px;
+    }
+}
