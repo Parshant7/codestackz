@@ -3,6 +3,8 @@ import Contactusicons from "../components/form/contactusicons";
 
 const Contactus = () => {
 
+    document.title = "Contact Us | codestackz.in"
+
     return (
         <>
             <ContactusForm/>

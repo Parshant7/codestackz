@@ -1,11 +1,11 @@
-import TopBar from './../components/topbar/topbar'
-import NavBar from './../components/navbar/navbar'
 import Carousel from './../components/carousel/carousel'
 import Services from './../components/services/services'
 import ContactusForm from './../components/form/contactus'
-import Footer from './../components/footer/footer'
 
 const Home = () => {
+
+  // document.title="Homerr | codestackz.in"
+
   return (
     <>
       <Carousel />

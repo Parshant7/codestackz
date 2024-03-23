@@ -66,17 +66,21 @@
 @media screen and (max-width:991px) {
     .mdForm {
         position: absolute;
-        top: 10%;
-        left: 10%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 4;
-        margin: auto;
-        /* background-color: red   ; */
+        width: 80%;
     }
+
+    .letConnectMain {
+        padding: 0px;
+        position: relative;
+    }
+    
 
     .inputField {
         padding: 4px 15px;
-        margin-bottom: 0px;
-        outline: none;
         width: 70%;
         font-size: 14px;
     }
@@ -89,11 +93,7 @@
         font-size: 14px;
     }
 
-    .letConnectMain {
-        padding: 100px 40px 120px;
-        position: relative;
-    }
-
+   
     .errField{
         height: 35px;
         margin-top: 2px;
@@ -106,15 +106,22 @@
 }
 
 @media screen and (max-width:1199px) {
-    .letConnectMain {
+    .letConnectMain{
         padding: 0px 0px 40px 0px;
         position: relative;
     }
 }
-
 @media screen and (max-width:767px) {
     .letConnectMain {
         padding: 20px 0px 90px 0px;
-        position: relative;
+    }
+    .mdForm{
+        width: 100%;
+        text-align: center;
+    }
+    .inputField {
+        padding: 4px 15px;
+        width: 85%;
+        font-size: 14px;
     }
 }

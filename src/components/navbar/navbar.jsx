@@ -70,9 +70,9 @@ const NavBar = () => {
                   <a className="nav-link navLink" href="#">Link</a>
                 </li>
                 <li className="nav-item dropdown custombg">
-                  <a className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
-                  </a>
+                  </span>
                   <div className="dropdown-menu w-100 text-white servicesDropdownDiv" >
                     <ul type='none' className="p-0">
                       <li className="navLink cus">

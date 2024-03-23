@@ -1,3 +1,16 @@
 .technoDiv{
-    background-color: rgb(209, 236, 221);
+    /* background-color: rgb(209, 236, 221); */
+    background-color: #b6c9fe;
+    color: black;
+}
+
+.techCard{
+    background-color: #3652AD;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 45px 80px;
+    margin: auto;
+    color:  white;
+    
 }
