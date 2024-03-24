@@ -1,5 +1,131 @@
-#aboutusCarouselDiv{
+#aboutusCarouselDiv {
     background-color: rgb(222, 216, 216);
     text-align: center;
     padding: 110px 40px;
+
+}
+
+#outer {
+    background-color: rgb(222, 216, 216);
+
+}
+
+#inner {
+    padding-top: 120px;
+    padding-inline: 50px;
+    padding-bottom: 100px;
+    background-color: rgb(166, 161, 161);
+    height: fit-content;
+    overflow: hidden;
+    border-top-left-radius: 900px 200px;
+    border-top-right-radius: 900px 200px;
+
+}
+
+#inner img {
+    width: 100%;
+    min-height: 480px;
+    height: 480px;
+    background-size: contain;
+    background-position: bottom bottom;
+    border-top-right-radius: 900px 100px;
+}
+
+#inner .left {
+    min-height: 480px;
+    max-height: 480px;
+    height: 480px;
+    text-align: center;
+    background-color: rgb(222, 216, 216);
+    border-top-left-radius: 900px 100px;
+    padding: 80px 50px;
+
+}
+
+@media screen and (max-width:1000px) {
+
+    #inner {
+        padding-top: 80px;
+        padding-inline: 35px;
+        padding-bottom: 70px;
+        background-color: rgb(166, 161, 161);
+        height: fit-content;
+        border-top-left-radius: 900px 200px;
+        border-top-right-radius: 900px 200px;
+    
+    }
+
+    #inner .left {
+        width: 90%;
+        margin: auto;
+        border-top-left-radius: 500px 50px;
+        border-top-right-radius: 500px 50px;
+
+        padding: 20px 50px;
+        height: fit-content;
+        max-height: 10000px;
+
+
+    }
+
+    #inner img {    
+        width: 100%;
+        min-height: 480px;
+        height: 480px;
+        background-size: contain;
+        background-position: bottom bottom;
+        border-top-right-radius: 0px;
+    }
+
+    #inner .right {
+        margin: auto;
+        margin-top: 20px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+
+    }
+
+
+
+}
+
+
+@media screen and (max-width:500px) {
+    
+    #inner {
+        padding-top: 30px;
+        padding-inline: 15px;
+        padding-bottom: 40px;
+        background-color: rgb(166, 161, 161);
+        height: fit-content;
+        border-top-left-radius: 500px 50px;
+        border-top-right-radius: 500px 50px;
+    
+    }
+
+
+    #inner .left {
+        width: 100%;
+        margin: auto;
+        border-top-left-radius: 500px 50px;
+        border-top-right-radius: 500px 50px;
+
+        padding: 20px 50px;
+        height: fit-content;
+        max-height: 10000px;
+
+
+    }
+
+    #inner .right {
+        margin: auto;
+        /* margin-top: 20px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+
+    }
 }

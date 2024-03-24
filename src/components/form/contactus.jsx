@@ -60,6 +60,7 @@ const ContactusForm = () => {
     if (name == "") {
       setInputErr(prevState => { console.log(prevState); return ({ ...prevState, name: "Please enter" }) });
       emptyErr();
+      nameRef.current.focus();
       return;
     } else {
       setInputErr(prevState => ({ ...prevState, name: "" }));
@@ -68,11 +69,13 @@ const ContactusForm = () => {
     if (email == "") {
       setInputErr(prevState => ({ ...prevState, email: "Please enter" }));
       emptyErr();
+      emailRef.current.focus();
       return;
     }
     else if (!emailRegex.test(email)) {
       setInputErr(prevState => ({ ...prevState, email: "Please enter correct" }));
       emptyErr();
+      emailRef.current.focus();
       return;
     }
     else {
@@ -82,10 +85,12 @@ const ContactusForm = () => {
     if (contact == "") {
       setInputErr(prevState => ({ ...prevState, contact: "Please enter" }));
       emptyErr();
+      contactRef.current.focus();
       return;
     } else if (contact.length < 10) {
       setInputErr(prevState => ({ ...prevState, contact: "Please enter correct" }));
       emptyErr();
+      contactRef.current.focus();
       return;
     }
     else {
@@ -95,6 +100,7 @@ const ContactusForm = () => {
     if (serviceType == "none") {
       setInputErr(prevState => ({ ...prevState, serviceType: "Please select" }));
       emptyErr();
+      serviceTypeRef.current.focus();
       return;
     }
     else {
@@ -104,6 +110,7 @@ const ContactusForm = () => {
     if (aboutProject == "") {
       setInputErr(prevState => ({ ...prevState, aboutProject: "Please telll something" }));
       emptyErr();
+      aboutProjectRef.current.focus();
       return;
     }
     else {
