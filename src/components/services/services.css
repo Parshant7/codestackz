@@ -3,12 +3,84 @@
     padding: 20px;
 }
 
-.customCard:hover{
-    box-shadow: #3652AD 3px 0px , #3652AD -3px 0    px ;
-    /* box-shadow: ; */
-}
 
 .servicesIcon{
     width: 40px;
     height: 40px;
+}
+
+
+
+.customCard::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+.customCard:hover::before {
+    animation: debutb .7s linear forwards;
+}
+
+
+.customCard::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border: 2px solid transparent;
+
+}
+
+.customCard:hover::after {
+    animation: debuta .7s linear forwards;
+
+}
+
+
+@keyframes debuta {
+    0% {
+        width: 0;
+        height: 0;
+        border-color: transparent transparent transparent #244486;
+    }
+
+    50% {
+        width: 0;
+        height: 101%;
+        border-color: transparent transparent #244486 #244486;
+    }
+
+    100% {
+        width: 101%;
+        height: 101%;
+        border-color: transparent transparent #244486 #244486;
+    }
+}
+
+@keyframes debutb {
+    0% {
+        width: 0;
+        height: 0;
+        border-color: #244486 transparent transparent;
+    }
+
+    50% {
+        width: 101%;
+        height: 0;
+        border-color: #244486 #244486 transparent transparent;
+    }
+
+    100% {
+        width: 101%;
+        height: 101%;
+        border-color: #244486 #244486 transparent transparent;
+    }
 }

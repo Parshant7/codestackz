@@ -99,9 +99,9 @@
 @media screen and (max-width:500px) {
     
     #inner {
-        padding-top: 30px;
+        padding-top: 18px;
         padding-inline: 15px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         height: fit-content;
         border-top-left-radius: 500px 50px;
         border-top-right-radius: 500px 50px;

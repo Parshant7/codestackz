@@ -1,4 +1,6 @@
-import gursewak from '/images/ourteam/gursewak.jpg'
+import gursewak from '/images/ourteam/gursewak.png'
+
+
 import './aboutusteam.css'
 const AboutusTeam = () => {
     return (

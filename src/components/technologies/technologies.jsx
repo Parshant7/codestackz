@@ -11,7 +11,7 @@ const Technologies = () => {
 
     return (
         <>
-            <section className="mb-3 technoDiv">
+            <section className="mb-3  technoDiv">
                 <div className="p-4 text-center">
                     <span className="h2 ">Technologies We work with</span>
                 </div>
