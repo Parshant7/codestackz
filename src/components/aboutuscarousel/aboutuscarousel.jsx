@@ -19,10 +19,10 @@ const AboutusCarousel = () => {
                 <div id='outer'>
                     <div id="inner">
                         <div className="row">
-                            <div className="col-xl-10 col-lg-12 mx-auto">
+                            <div className="col-xl-11 col-lg-11 mx-auto">
                                 <div className="row d-flex align-items-center">
                                     <div id='leftDiv' className="col-md-6 left h-100  d-flex align-items-center justify-content-center">
-                                        <div className='text-start mt-4' style={{fontSize:"19px"}}>
+                                        <div className='mt-4' style={{fontSize:"19px"}}>
                                             <p>At Codestacks, we are driven by the vision of creating innovative solutions that shape the future. As a budding startup, we are dedicated to pioneering new paths in the software industry. While we may be young, our passion and determination to make an impact are unmatched.</p>
                                             <p>With Codestacks, you can expect nothing less than our absolute best. Join us on our journey as we embark on a quest to redefine possibilities and carve our place in the digital landscape. Together, let's build a future where innovation knows no limits.</p>
                                         </div>

@@ -11,7 +11,7 @@ const Services = () => {
             <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }}>
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
             </div>
-            <div className="row  px-3" style={{ backgroundColor: "whitesmoke" }}>
+            <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }}>
                 <div className="col-md-6 col-lg-4 mb-3">
                     <div className="card customCard">
                         <div className='card-header bg-white border-0 d-flex align-items-center'>
