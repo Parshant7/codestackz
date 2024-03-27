@@ -3,6 +3,7 @@ import {Outlet} from 'react-router-dom'
 import TopBar from "../topbar/topbar";
 import NavBar from "../navbar/navbar";
 import Footer from "../footer/footer";
+import Brandlogo from '../brandlogo/brandlogo';
 
 const Root = () => {
 
@@ -12,6 +13,7 @@ const Root = () => {
             <NavBar/>
             <Outlet/>
             <Footer/>
+            {/* <Brandlogo/> */}
         </>
     )
 

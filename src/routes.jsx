@@ -3,6 +3,7 @@ import Root from './components/root/root'
 import Home from './pages/Home'
 import Contactus from './pages/Contactus'
 import Aboutus from './pages/Aboutus'
+import Webdev from './pages/webdev'
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: "/aboutus",
                 element: <Aboutus />
+            },
+            {
+                path:"/services/webdevelopment",
+                element: <Webdev />
             }
         ]
     }

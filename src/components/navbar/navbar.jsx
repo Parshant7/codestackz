@@ -51,18 +51,17 @@ const NavBar = () => {
           <Link className="btn ltblue px-3 me-4 d-md-none navButton xxsHide" to={'/contactus'}><i className="fa-solid fa-clipboard-question fs-4"></i></Link>
           <a className="btn px-3 me-3 ms-auto d-none d-md-block d-xl-none float-end ltblue navButton" href='tel:8887777555'>888 7777 555</a>
           <Link className="btn ltblue px-3 me-4 d-none d-md-block d-xl-none  float-end navButton" to={'/contactus'}>Quote on the housee</Link>
-          <button className="navbar-toggler navButton  rounded-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <i className="fa-solid fa-bars fs-2" style={{ color: "#ffffff" }}></i>
+          <button className="rounded-3 ltblue text-white d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i className="fa-solid fa-bars" style={{fontSize:"36px"}}></i>
           </button>
 
           <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel"><a className="navbar-brand fs-3 fw-bold text-white" id="brandName" href="#"><img src={cszlogo} style={{ width: "47px", height: "47px", marginRight: "5px" }}></img></a></h5>
-              {/* <button type="button" className="btn-close" ></button> */}
-              <button className="fa-solid fa-xmark border-0 bg-white fs-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button className="fa-solid fa-xmark border-0 bg-white " style={{fontSize:"38px"}} data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body  ps-0 customCanvas" style={{ minWidth: "600px" }}>
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul className="navbar-nav justify-content- flex-grow-1 pe-3">
                 <li className="nav-item ms-xl-auto me-2 custombg">
                   <Link className="nav-link navLink" aria-current="page" to={'/'} >Home</Link>
                 </li>
@@ -94,7 +93,7 @@ const NavBar = () => {
                   <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
                 </li>
                 <li className="nav-item me-2 custombg">
-                  <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
+                  <Link className="nav-link navLink"   to={'/contactus'}>Contact us</Link>
                 </li>
 
                 <li className="ms-auto d-none d-xl-block">

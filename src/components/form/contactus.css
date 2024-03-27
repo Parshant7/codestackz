@@ -124,4 +124,9 @@
         width: 85%;
         font-size: 14px;
     }
+    .errField{
+        margin: auto;
+        margin-top: 2px;
+        width: 85%;
+    }
 }

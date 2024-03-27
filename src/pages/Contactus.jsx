@@ -1,9 +1,10 @@
 import ContactusForm from "../components/form/contactus";
 import Contactusicons from "../components/form/contactusicons";
+import TabTitle from './generalFunctions'
 
 const Contactus = () => {
 
-    document.title = "Contact Us | codestackz.in"
+    TabTitle("Contact Us | codestackz.in");
 
     return (
         <>

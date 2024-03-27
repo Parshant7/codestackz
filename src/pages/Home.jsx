@@ -1,10 +1,11 @@
 import Carousel from './../components/carousel/carousel'
 import Services from './../components/services/services'
 import ContactusForm from './../components/form/contactus'
+import TabTitle from './generalFunctions'
 
 const Home = () => {
 
-  document.title="Home | codestackz.in"
+  TabTitle("Home | codestackz.in")
 
   return (
     <>

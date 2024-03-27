@@ -26,14 +26,16 @@
 }
 .navLink:hover{
     color: white;
-    font-weight: bold;
+    transform: scale(1.08);
 }
-/* .navLink:after{
-    color: red;
-} */
+
 
 .servicesDropdownDiv{
     background-color: grey;
+}
+
+.custombg{
+    min-width: fit-content;
 }
 
 @media screen and (max-width: 1199px) {
@@ -69,11 +71,22 @@
 
 @media screen and (min-width: 1200px) {
     .servicesDropdownDiv{
-        background-color: grey;
         padding: 25px;
         width: fit-content;
         min-width: 18rem;
         font-size: 16px;
 
     }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(236, 241, 154); /* Change this to desired background color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 1, 0); /* Change this to desired handle color */
 }
