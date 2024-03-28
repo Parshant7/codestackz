@@ -4,14 +4,21 @@ import chooseusimg3 from '/images/chooseus/proof-of-concept.png'
 import chooseusimg4 from '/images/chooseus/customer-satisfaction.png'
 import chooseusimg5 from '/images/chooseus/continuous-improvement.png'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 import './chooseus.css'
+import { useEffect } from 'react'
 
 const Chooseus = () => {
+
+    useEffect(()=>{
+        AOS.init({duration:700,once:"true"});
+    })
     return (
         <>
-            <section className='reasonsDiv'>
+            <section className='reasonsDiv' data-aos="fade-up">
                 <div className="py-4 text-center h2 fw-bold mb-4">
                     Reasons to choose Codestackz
                 </div>

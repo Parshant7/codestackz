@@ -1,8 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
 import contactusImg from '/images/cai4.jpeg'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './contactus.css'
 
 const ContactusForm = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  })
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -127,20 +133,20 @@ const ContactusForm = () => {
     <>
       <section>
         <div className="text-center p-4 pb-2 pb-sm-4 letConnectHeading">
-          <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Lets Connect</h1>
+          <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }} data-aos="flip-right">Lets Connect</h1>
         </div>
 
         <div className="row letConnectMain pt-3">
-          <div className="col-md-12 d-block d-lg-none">
+          <div className="col-md-12 d-block d-lg-none" data-aos="fade-right">
             <div style={{ backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "500px", filter: "blur(10px)" }}>
 
             </div>
           </div>
-          <div className="offset-lg-1 col-md-12 col-lg-6 mdForm">
-            <div className=''>
+          <div className="offset-lg-1 col-md-12 col-lg-6 mdForm" >
+            <div className='' data-aos="fade-left">
               <form action=" " id='contactusForm'>
-                <div className="row">
-                  <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto">
+                <div className="row" >
+                  <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto"  >
                     <input type="text" name="name" id="" placeholder="Name" className='inputField' ref={nameRef} /> <br />
                     <div className='errField'>
                       {/* <span className={`${inputErr.name ? '' : 'd-none'}`}>{errDiv(inputErr.name)}</span> */}
@@ -164,7 +170,8 @@ const ContactusForm = () => {
                         <div>
                           {inputErr.email}
                         </div>
-                      </div>                  </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="row">
@@ -224,7 +231,7 @@ const ContactusForm = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-4 d-none d-lg-block">
+          <div className="col-md-4 d-none d-lg-block" data-aos="fade-right">
             <div style={{ backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
 
             </div>

@@ -1,10 +1,20 @@
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+
 import './footer.css'
 import cszlogo from '/images/cszlogo.png'
 const Footer = () => {
+
+    useEffect(()=>{
+        AOS.init({duration:1000,once:"true"});
+    })
+
     return (
         <>
             <div>
-                <div className="row p-5 footerMain">
+                <div className="row p-5 footerMain" data-aos="fade-up">
                     <div className="col-sm-6 col-md-3 mb-3 mb-md-0">
                         <div className='mx-auto footerDivsCenter'>
                             <span className="h5">CodeStackZ</span>

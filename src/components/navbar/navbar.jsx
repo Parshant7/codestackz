@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos'
+
 import "./navbar.css"
 import cszlogo from '/images/cszlogo.png'
 const NavBar = () => {
@@ -7,6 +9,7 @@ const NavBar = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   useEffect(() => {
+    // Even listern to fix Navbar after scrolling a bit 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 40) {
@@ -15,14 +18,28 @@ const NavBar = () => {
         setIsNavbarFixed(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
+
+
+
+
+    // AOS 
+
+    const eles = document.getElementsByClassName('navLink');
+    Array.from(eles).forEach(ele => {
+      ele.setAttribute('data-aos', "fade-left")
+    })
+
+    AOS.init({ duration: 2000 });
+
 
     // Clean up the event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+
 
 
   setTimeout(() => {
@@ -45,20 +62,21 @@ const NavBar = () => {
   return (
     <>
       <nav className={`navbar navbar-expand-xl py-3 ltblue ${isNavbarFixed ? 'fixed-top' : ''}`}  >
-        <div className="container">
-          <Link className="navbar-brand fs-3 fw-bold text-white" id="brandName" to={'/'}><img src={cszlogo} style={{ width: "50px", height: "50px", marginRight: "5px" }}></img>CodeStack<span className="text-danger">Z</span></Link>
-          <a className="btn ltblue me-3 ms-auto d-md-none navButton xxsHide" href='tel:8887777555' style={{ paddingInline: ".8rem " }}><i className="fa-solid fa-phone fs-5"></i></a>
-          <Link className="btn ltblue px-3 me-4 d-md-none navButton xxsHide" to={'/contactus'}><i className="fa-solid fa-clipboard-question fs-4"></i></Link>
-          <a className="btn px-3 me-3 ms-auto d-none d-md-block d-xl-none float-end ltblue navButton" href='tel:8887777555'>888 7777 555</a>
-          <Link className="btn ltblue px-3 me-4 d-none d-md-block d-xl-none  float-end navButton" to={'/contactus'}>Quote on the housee</Link>
-          <button className="rounded-3 ltblue text-white d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <i className="fa-solid fa-bars" style={{fontSize:"36px"}}></i>
+        <div className="container" >
+          <Link className="navbar-brand fs-3 fw-bold text-white d-block d-xl-none" id="brandName" to={'/'} data-aos="fade-right"><img src={cszlogo} style={{ width: "50px", height: "50px", marginRight: "5px" }}></img>CodeStack<span className="text-danger">Z</span></Link>
+          <Link className="navbar-brand fs-3 fw-bold text-white d-none d-xl-block" id="brandName" to={'/'}><img src={cszlogo} style={{ width: "50px", height: "50px", marginRight: "5px" }}></img>CodeStack<span className="text-danger">Z</span></Link>
+          <a className="btn ltblue me-3 ms-auto d-md-none navButton xxsHide" href='tel:8887777555' style={{ paddingInline: ".8rem " }} data-aos="fade-left"><i className="fa-solid fa-phone fs-5"></i></a>
+          <Link className="btn ltblue px-3 me-4 d-md-none navButton xxsHide" to={'/contactus'} data-aos="fade-left"><i className="fa-solid fa-clipboard-question fs-4"></i></Link>
+          <a className="btn px-3 me-3 ms-auto d-none d-md-block d-xl-none float-end ltblue navButton" href='tel:8887777555' data-aos="fade-left">888 7777 555</a>
+          <Link className="btn ltblue px-3 me-4 d-none d-md-block d-xl-none  float-end navButton" to={'/contactus'} data-aos="fade-left">Quote on the housee</Link>
+          <button className="rounded-3 ltblue text-white d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" data-aos="fade-left">
+            <i className="fa-solid fa-bars" style={{ fontSize: "36px" }}></i>
           </button>
 
           <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel"><a className="navbar-brand fs-3 fw-bold text-white" id="brandName" href="#"><img src={cszlogo} style={{ width: "47px", height: "47px", marginRight: "5px" }}></img></a></h5>
-              <button className="fa-solid fa-xmark border-0 bg-white " style={{fontSize:"38px"}} data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button className="fa-solid fa-xmark border-0 bg-white " style={{ fontSize: "38px" }} data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body  ps-0 customCanvas" style={{ minWidth: "600px" }}>
               <ul className="navbar-nav justify-content- flex-grow-1 pe-3">
@@ -93,7 +111,7 @@ const NavBar = () => {
                   <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
                 </li>
                 <li className="nav-item me-2 custombg">
-                  <Link className="nav-link navLink"   to={'/contactus'}>Contact us</Link>
+                  <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
                 </li>
 
                 <li className="ms-auto d-none d-xl-block">

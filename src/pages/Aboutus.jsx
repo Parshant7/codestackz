@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet'
 
 import AboutusCarousel from "../components/aboutuscarousel/aboutuscarousel";
 import AboutusTeam from "../components/aboutusteam/aboutusteam";

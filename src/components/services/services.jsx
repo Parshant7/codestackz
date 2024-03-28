@@ -1,19 +1,38 @@
 import { Link } from 'react-router-dom'
-
+import { useEffect } from 'react'
 import webDImg from '/images/services/webD1.png'
 import appDImg from '/images/services/appD1.png'
 import webMImg from '/images/services/webM1.png'
 import webCImg from '/images/services/webC1.png'
 
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import './services.css'
 const Services = () => {
 
+    useEffect(() => {
+
+        const eles = document.getElementsByClassName('customCard');
+        
+        Array.from(eles).forEach(ele => {
+            ele.setAttribute("data-aos", "zoom-in-up");
+            ele.setAttribute("data-aos-once", "true");
+            ele.setAttribute("data-aos-duration", "500");
+        })
+        AOS.init({ duration: 500, once: true, });
+
+
+
+    })
+
     return (
         <>
-            <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }}>
+            <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
             </div>
-            <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }}>
+            <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }} >
                 <div className="col-md-6 col-lg-4 mb-3">
                     <Link to={'services/webdevelopment'}>
                         <div className="card customCard">

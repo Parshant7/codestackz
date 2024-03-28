@@ -1,8 +1,19 @@
 import gursewak from '/images/ourteam/gursewak.png'
-
+import AOS from 'aos'
 
 import './aboutusteam.css'
+import { useEffect } from 'react'
 const AboutusTeam = () => {
+
+
+    useEffect(()=>{
+        const eles = document.getElementsByClassName('iconshadow');
+        Array.from(eles).forEach(ele=>{
+            ele.setAttribute('data-aos',"fade-up");
+        })
+        AOS.init({duration:1000,once:"true"})
+    })
+
     return (
         <>
             <section>
