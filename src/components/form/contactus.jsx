@@ -163,7 +163,7 @@ const ContactusForm = () => {
 
         <div className="row letConnectMain pt-3">
           <div className="col-md-12 d-block d-lg-none" data-aos="fade-right">
-            <div style={{ backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "500px", filter: "blur(10px)" }}>
+            <div id='formbg' style={{ backgroundImage: `url(${contactusImg})` }}>
 
             </div>
           </div>
@@ -253,16 +253,18 @@ const ContactusForm = () => {
                   <div className="col-md-4"></div>
                 </div>
                 <div className='row'>
-                  <div className='col-xs-12 col-sm-12 col-md-12 mx-auto mb-4'>
+                  <div id='captchaDiv' className='col-xs-12 col-sm-12 col-md-12 mx-auto mb-4'>
+                    <div>
                     <ReCAPTCHA
                       sitekey="6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa"
                       onChange={onChange}
                     />
+                    </div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-xs-12 col-sm-9 col-md-4 mx-auto">
-                    <button className='btn btn-success btn-lg w-50' onClick={handleSubmit}>Submit</button>
+                    <button className='btn btn-success btn-lg w-50' style={{minWidth:"fit-content"}} onClick={handleSubmit}>Submit</button>
                   </div>
                   <div className="col-md-8">
                     <div className='successField w-100 px-4' >
