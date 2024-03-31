@@ -1,11 +1,9 @@
+import WebCarouel from "../components/webcarousel/webcarousel";
+
 const Webdev = () => {
     return (
         <>
-            <section>
-                <div>
-                    <img src="" alt="" />
-                </div>
-            </section>
+            <WebCarouel />
         </>
     )
 }

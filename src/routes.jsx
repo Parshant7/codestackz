@@ -8,7 +8,7 @@ import Webdev from './pages/webdev'
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <Root/>,
         children: [
             {
                 path: "/",

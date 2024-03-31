@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
+import ReCAPTCHA from "react-google-recaptcha";
 import contactusImg from '/images/cai4.jpeg'
+import Axios from 'axios'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './contactus.css'
@@ -10,32 +13,21 @@ const ContactusForm = () => {
     AOS.init({ duration: 1000 });
   })
 
+
+
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const contactRef = useRef(null);
   const serviceTypeRef = useRef(null);
   const aboutProjectRef = useRef(null);
 
-  const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "" })
+  const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "" })
 
-  // const errDiv = (text) => {
-  //   return (
-  //     <>
-  //       <div className={`alert alert-danger alert-dismissable d-flex align-items-center ${text ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
-  //         <div className='me-2'>
-  //           <i className="fa-solid fa-triangle-exclamation" style={{ color: "#f20202" }}></i>
-  //         </div>
-  //         <div>
-  //           {text}
-  //         </div>
-  //       </div>
-  //     </>
-  //   )
-  // }
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
-
-
-  const emptyErr = (eleId) => {
+  const emptyErr = () => {
 
     setTimeout(() => {
       let eles = document.getElementsByClassName('alert');
@@ -46,7 +38,7 @@ const ContactusForm = () => {
     }, 2000);
 
     setTimeout(() => {
-      setInputErr({ name: "", email: "", contact: "", serviceType: "", aboutProject: "" });
+      setInputErr({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "" });
     }, 3700)
 
   }
@@ -71,7 +63,6 @@ const ContactusForm = () => {
     } else {
       setInputErr(prevState => ({ ...prevState, name: "" }));
     }
-
     if (email == "") {
       setInputErr(prevState => ({ ...prevState, email: "Please enter" }));
       emptyErr();
@@ -123,7 +114,39 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
 
+
+
     alert("form is valid to submit.")
+
+    const submitFunc = async () => {
+      const obj = { name: name, email: email, contact: contact, serviceType: serviceType, aboutProject: aboutProject }
+      console.log(obj);
+      // const response = await Axios({
+      //   method: "post",
+      //   url: 'http://localhost:3000/submitcontactus',
+      //   data: JSON.stringify(obj),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // });
+      // if (response.status == 201) {
+      //   setInputErr(prevState => ({ ...prevState, submitted: "Submitted Successfully." }))
+      //   emptyErr();
+      // };
+
+
+      const response = await Axios({
+        url: 'https://formspree.io/f/xnqeggpo',
+        method: 'post',
+        headers: {
+          'Accept': 'application/json'
+        },
+        data: obj
+      });
+      console.log(response);
+
+    };
+    submitFunc();
 
   }
 
@@ -132,6 +155,8 @@ const ContactusForm = () => {
   return (
     <>
       <section>
+
+
         <div className="text-center p-4 pb-2 pb-sm-4 letConnectHeading">
           <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }} data-aos="flip-right">Lets Connect</h1>
         </div>
@@ -143,9 +168,13 @@ const ContactusForm = () => {
             </div>
           </div>
           <div className="offset-lg-1 col-md-12 col-lg-6 mdForm" >
+
             <div className='' data-aos="fade-left">
               <form action=" " id='contactusForm'>
                 <div className="row" >
+
+
+
                   <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto"  >
                     <input type="text" name="name" id="" placeholder="Name" className='inputField' ref={nameRef} /> <br />
                     <div className='errField'>
@@ -223,9 +252,29 @@ const ContactusForm = () => {
                   </div>
                   <div className="col-md-4"></div>
                 </div>
+                <div className='row'>
+                  <div className='col-xs-12 col-sm-12 col-md-12 mx-auto mb-4'>
+                    <ReCAPTCHA
+                      sitekey="6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa"
+                      onChange={onChange}
+                    />
+                  </div>
+                </div>
                 <div className="row">
-                  <div className="col-xs-12 col-sm-9 col-md-12 mx-auto">
-                    <button className='btn btn-success btn-lg w-25' onClick={handleSubmit}>Submit</button>
+                  <div className="col-xs-12 col-sm-9 col-md-4 mx-auto">
+                    <button className='btn btn-success btn-lg w-50' onClick={handleSubmit}>Submit</button>
+                  </div>
+                  <div className="col-md-8">
+                    <div className='successField w-100 px-4' >
+                      <div id='successAlert' className={`alert alert-success d-flex align-items-center ${inputErr.submitted ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
+                        <div className='me-2'>
+                          <i className="fa-solid fa-triangle-exclamation" style={{ color: "#f20202" }}></i>
+                        </div>
+                        <div>
+                          {inputErr.submitted}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>

@@ -65,9 +65,9 @@ const NavBar = () => {
         <div className="container" >
           <Link className="navbar-brand fs-3 fw-bold text-white d-block d-xl-none" id="brandName" to={'/'} data-aos="fade-right"><img src={cszlogo} style={{ width: "50px", height: "50px", marginRight: "5px" }}></img>CodeStack<span className="text-danger">Z</span></Link>
           <Link className="navbar-brand fs-3 fw-bold text-white d-none d-xl-block" id="brandName" to={'/'}><img src={cszlogo} style={{ width: "50px", height: "50px", marginRight: "5px" }}></img>CodeStack<span className="text-danger">Z</span></Link>
-          <a className="btn ltblue me-3 ms-auto d-md-none navButton xxsHide" href='tel:8887777555' style={{ paddingInline: ".8rem " }} data-aos="fade-left"><i className="fa-solid fa-phone fs-5"></i></a>
+          <a className="btn ltblue me-3 ms-auto d-md-none navButton xxsHide" href='tel:9781789405' style={{ paddingInline: ".8rem " }} data-aos="fade-left"><i className="fa-solid fa-phone fs-5"></i></a>
           <Link className="btn ltblue px-3 me-4 d-md-none navButton xxsHide" to={'/contactus'} data-aos="fade-left"><i className="fa-solid fa-clipboard-question fs-4"></i></Link>
-          <a className="btn px-3 me-3 ms-auto d-none d-md-block d-xl-none float-end ltblue navButton" href='tel:8887777555' data-aos="fade-left">888 7777 555</a>
+          <a className="btn px-3 me-3 ms-auto d-none d-md-block d-xl-none float-end ltblue navButton" href='tel:9781789405' data-aos="fade-left">978 1789 405</a>
           <Link className="btn ltblue px-3 me-4 d-none d-md-block d-xl-none  float-end navButton" to={'/contactus'} data-aos="fade-left">Quote on the housee</Link>
           <button className="rounded-3 ltblue text-white d-block d-xl-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" data-aos="fade-left">
             <i className="fa-solid fa-bars" style={{ fontSize: "36px" }}></i>
