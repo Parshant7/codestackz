@@ -1,7 +1,7 @@
 import ContactusForm from "../components/form/contactus";
 import Contactusicons from "../components/form/contactusicons";
 import TabTitle from './generalFunctions'
-import Faqs from "../components/faqs/faqs";
+// import Faqs from "../components/faqs/faqs";
 
 const Contactus = () => {
 
@@ -11,7 +11,7 @@ const Contactus = () => {
         <>
             <ContactusForm />
             <Contactusicons />
-            <Faqs />
+            {/* <Faqs /> */}
         </>
     )
 }
