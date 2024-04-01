@@ -7,6 +7,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './contactus.css'
 
+
 const ContactusForm = () => {
 
   useEffect(() => {
@@ -22,10 +23,6 @@ const ContactusForm = () => {
   const aboutProjectRef = useRef(null);
 
   const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "", submitErr: "",loading:"" })
-
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
 
   const emptyErr = () => {
     setInputErr(prevState => ({ ...prevState, loading: "" }))
@@ -44,10 +41,9 @@ const ContactusForm = () => {
 
   }
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
 
     let name = nameRef.current.value.trim();
     let email = emailRef.current.value.trim();
@@ -114,12 +110,17 @@ const ContactusForm = () => {
     else {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
+    
+    if(grecaptcha.getResponse()==""){
+      return;
+    }
 
     // alert("form is valid to submit.")
     setInputErr(prevState => ({ ...prevState, loading: "yes" }))
 
     const submitFunc = async () => {
-      const obj = { name: name, email: email, contact: contact, serviceType: serviceType, aboutProject: aboutProject }
+      const obj = { name: name, email: email, contact: contact, serviceType: serviceType, aboutProject: aboutProject}
+      obj["g-recaptcha-response"] = grecaptcha.getResponse(); 
 
       try {
         const response = await Axios({
@@ -144,9 +145,6 @@ const ContactusForm = () => {
         }
 
       }
-
-
-
     };
     submitFunc();
 
@@ -174,9 +172,6 @@ const ContactusForm = () => {
             <div className='' data-aos="fade-left">
               <form action=" " id='contactusForm'>
                 <div className="row" >
-
-
-
                   <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto"  >
                     <input type="text" name="name" id="" placeholder="Name" className='inputField' ref={nameRef} /> <br />
                     <div className='errField'>
@@ -256,19 +251,18 @@ const ContactusForm = () => {
                 </div>
                 <div className='row'>
                   <div id='captchaDiv' className='col-xs-12 col-sm-12 col-md-12 mx-auto mb-4'>
-                    <div>
                       <ReCAPTCHA
                         sitekey="6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa"
-                        onChange={onChange}
+                        // localhost:6LelFqspAAAAABsFc1tSuUzd2WADcMLj5wkzquon
+                        // production:6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa
                       />
-                    </div>
                   </div>
                 </div>
                 <div className="row mb-3">
                   <div className="col-xs-12 col-sm-9 col-md-4 mx-auto ">
                     <button className='btn btn-success btn-lg w-50' style={{ minWidth: "fit-content" }} onClick={handleSubmit}>Submit</button>
                     <div className={`spinner-border text-warning ms-3  ${inputErr.loading ? "": "d-none"}`} role="status">
-                      <span class="visually-hidden">Loading...</span>
+                      <span className="visually-hidden">Loading...</span>
                     </div>
                   </div>
                   <div className="col-md-8"></div>
