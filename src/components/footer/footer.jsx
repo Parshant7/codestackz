@@ -54,7 +54,7 @@ const Footer = () => {
 
                             <span className="h5">Contact Us</span>
                             <ul style={{ padding: "10px 20px" }}>
-                                <li><a href="tel:123456789" style={{ textDecoration: "none", color: "black" }}>888 7777 555</a></li>
+                                <li><a href="tel:9781789405" style={{ textDecoration: "none", color: "black" }}>978 1789 405</a></li>
                                 <li><a href="mailto:info@codestackz.in" style={{ textDecoration: "none", color: "black" }}>info@codestackz.in</a></li>
                             </ul>
                         </div>
