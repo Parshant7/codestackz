@@ -21,19 +21,13 @@ const NavBar = () => {
     window.addEventListener('scroll', handleScroll);
 
 
-
-
     // AOS 
-
-    const eles = document.getElementsByClassName('navLink');
-    Array.from(eles).forEach(ele => {
-      ele.setAttribute('data-aos', "fade-left")
-    })
 
     AOS.init({ duration: 2000 });
 
 
     // Clean up the event listener
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -41,22 +35,6 @@ const NavBar = () => {
 
 
 
-
-  setTimeout(() => {
-    var offcanvasNavbar1 = document.getElementById('offcanvasNavbar');
-    if (!offcanvasNavbar1.hasEventListener) {
-      offcanvasNavbar1.hasEventListener = true;
-      offcanvasNavbar1.addEventListener('click', function (event) {
-
-        if (event.target.tagName == 'A') {
-          offcanvasNavbar1.classList.remove('show');
-          event.stopPropagation();
-        }
-
-
-      });
-    }
-  }, 2000)
 
 
   return (
@@ -81,11 +59,15 @@ const NavBar = () => {
             <div className="offcanvas-body  ps-0 customCanvas" style={{ minWidth: "600px" }}>
               <ul className="navbar-nav justify-content- flex-grow-1 pe-3">
                 <li className="nav-item ms-xl-auto me-2 custombg">
-                  <Link className="nav-link navLink" aria-current="page" to={'/'} >Home</Link>
+                  <div data-bs-dismiss="offcanvas" aria-label="Close">
+                    <Link className="nav-link navLink" aria-current="page" to={'/'} >Home</Link>
+                  </div>
                 </li>
-                <li className="nav-item me-2 custombg">
+                {/* <li className="nav-item me-2 custombg">
+                <div  data-bs-dismiss="offcanvas" aria-label="Close">
                   <a className="nav-link navLink" href="#">Link</a>
-                </li>
+                  </div>
+                </li> */}
                 <li className="nav-item dropdown custombg">
                   <span className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
@@ -94,7 +76,7 @@ const NavBar = () => {
                     <ul type='none' className="p-0">
                       <li className="navLink cus">
                         Web Development
-                      </li>
+                      </li> 
                       <li className="navLink">
                         Mobile App Development
                       </li>
@@ -108,10 +90,14 @@ const NavBar = () => {
                   </div>
                 </li>
                 <li className="nav-item me-2 custombg">
-                  <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
+                  <div data-bs-dismiss="offcanvas" aria-label="Close">
+                    <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
+                  </div>
                 </li>
                 <li className="nav-item me-2 custombg">
-                  <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
+                  <div data-bs-dismiss="offcanvas" aria-label="Close">
+                    <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
+                  </div>
                 </li>
 
                 <li className="ms-auto d-none d-xl-block">

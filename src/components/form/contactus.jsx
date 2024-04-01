@@ -21,13 +21,14 @@ const ContactusForm = () => {
   const serviceTypeRef = useRef(null);
   const aboutProjectRef = useRef(null);
 
-  const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "" })
+  const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "", submitErr: "",loading:"" })
 
   function onChange(value) {
     console.log("Captcha value:", value);
   }
 
   const emptyErr = () => {
+    setInputErr(prevState => ({ ...prevState, loading: "" }))
 
     setTimeout(() => {
       let eles = document.getElementsByClassName('alert');
@@ -38,7 +39,7 @@ const ContactusForm = () => {
     }, 2000);
 
     setTimeout(() => {
-      setInputErr({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "" });
+      setInputErr({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "", submitErr: "",loading:"" });
     }, 3700)
 
   }
@@ -56,7 +57,7 @@ const ContactusForm = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (name == "") {
-      setInputErr(prevState => { console.log(prevState); return ({ ...prevState, name: "Please enter" }) });
+      setInputErr(prevState => ({ ...prevState, name: "Please enter" }));
       emptyErr();
       nameRef.current.focus();
       return;
@@ -114,36 +115,37 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
 
-
-
-    alert("form is valid to submit.")
+    // alert("form is valid to submit.")
+    setInputErr(prevState => ({ ...prevState, loading: "yes" }))
 
     const submitFunc = async () => {
       const obj = { name: name, email: email, contact: contact, serviceType: serviceType, aboutProject: aboutProject }
-      console.log(obj);
-      // const response = await Axios({
-      //   method: "post",
-      //   url: 'http://localhost:3000/submitcontactus',
-      //   data: JSON.stringify(obj),
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   }
-      // });
-      // if (response.status == 201) {
-      //   setInputErr(prevState => ({ ...prevState, submitted: "Submitted Successfully." }))
-      //   emptyErr();
-      // };
+
+      try {
+        const response = await Axios({
+          url: 'https://formspree.io/f/xnqeggpo',
+          method: 'post',
+          headers: {
+            'Accept': 'application/json'
+          },
+          data: obj
+        });
+        // console.log("aaaaaaaaaaaaaaa", response)
+        if (response && response.status == 200) {
+          setInputErr(prevState => ({ ...prevState, submitted: "Submitted Successfully." }))
+          emptyErr();
+          
+        }
+      } catch (err) {
+        // console.log("BBBBBBBBBBBBBBBBBB", err)
+        if (err) {
+          setInputErr(prevState => ({ ...prevState, submitErr: "Something went wrong." }))
+          emptyErr();
+        }
+
+      }
 
 
-      const response = await Axios({
-        url: 'https://formspree.io/f/xnqeggpo',
-        method: 'post',
-        headers: {
-          'Accept': 'application/json'
-        },
-        data: obj
-      });
-      console.log(response);
 
     };
     submitFunc();
@@ -161,7 +163,7 @@ const ContactusForm = () => {
           <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }} data-aos="flip-right">Lets Connect</h1>
         </div>
 
-        <div className="row letConnectMain pt-3">
+        <div className="row letConnectMain pt-3 ">
           <div className="col-md-12 d-block d-lg-none" data-aos="fade-right">
             <div id='formbg' style={{ backgroundImage: `url(${contactusImg})` }}>
 
@@ -255,28 +257,47 @@ const ContactusForm = () => {
                 <div className='row'>
                   <div id='captchaDiv' className='col-xs-12 col-sm-12 col-md-12 mx-auto mb-4'>
                     <div>
-                    <ReCAPTCHA
-                      sitekey="6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa"
-                      onChange={onChange}
-                    />
+                      <ReCAPTCHA
+                        sitekey="6LfxLKopAAAAAML1BnOqMysKyMr1cn4E7HCE1Aqa"
+                        onChange={onChange}
+                      />
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-xs-12 col-sm-9 col-md-4 mx-auto">
-                    <button className='btn btn-success btn-lg w-50' style={{minWidth:"fit-content"}} onClick={handleSubmit}>Submit</button>
+                <div className="row mb-3">
+                  <div className="col-xs-12 col-sm-9 col-md-4 mx-auto ">
+                    <button className='btn btn-success btn-lg w-50' style={{ minWidth: "fit-content" }} onClick={handleSubmit}>Submit</button>
+                    <div className={`spinner-border text-warning ms-3  ${inputErr.loading ? "": "d-none"}`} role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
                   </div>
-                  <div className="col-md-8">
+                  <div className="col-md-8"></div>
+
+                </div>
+                <div className="row " style={{ minHeight: "60px" }}>
+                  <div className="col-md-12 mx-auto ps-0 ">
                     <div className='successField w-100 px-4' >
-                      <div id='successAlert' className={`alert alert-success d-flex align-items-center ${inputErr.submitted ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
+                      <div id='successAlert' className={`alert alert-success d-flex align-items- px-5 p-2 ${inputErr.submitted ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
-                          <i className="fa-solid fa-triangle-exclamation" style={{ color: "#f20202" }}></i>
+                          <i className="fa-solid fa-check text-success"></i>
                         </div>
                         <div>
                           {inputErr.submitted}
                         </div>
                       </div>
                     </div>
+
+                    <div className='successFailed w-100 px-4' >
+                      <div id='failedAlert' className={`alert alert-danger d-flex align-items-center  px-5 p-2  ${inputErr.submitErr ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
+                        <div className='me-2'>
+                          <i className="fa-solid fa-triangle-exclamation" style={{ color: "#f20202" }}></i>
+                        </div>
+                        <div>
+                          {inputErr.submitErr}
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </form>

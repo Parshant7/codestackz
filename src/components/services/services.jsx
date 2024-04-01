@@ -34,7 +34,7 @@ const Services = () => {
             </div>
             <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }} >
                 <div className="col-md-6 col-lg-4 mb-3">
-                    <Link to={'services/webdevelopment'}>
+                    {/* <Link to={'services/webdevelopment'}> */}
                         <div className="card customCard">
                             <div className='card-header bg-white border-0 d-flex align-items-center'>
                                 <img className="servicesIcon" src={webDImg} alt="" />
@@ -44,7 +44,7 @@ const Services = () => {
                                 <p>Our innovative web application development services are custom-built to meet the unique needs of businesses. Through the creation of responsive, user-friendly, and feature-rich web applications, we empower brands to enhance engagement and boost their online presence.</p>
                             </div>
                         </div>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className="col-md-6 col-lg-4 mb-3">
                     <div className="card customCard">
