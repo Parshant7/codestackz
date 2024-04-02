@@ -1,8 +1,15 @@
 import './faqs.css'
+import { useEffect } from 'react'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Faqs = () => {
 
-
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+      })
+    
     setTimeout(
         ()=>{
             const questions = document.querySelectorAll('.que');
@@ -35,7 +42,7 @@ const Faqs = () => {
                 </div>
                 <div>
                     <div className="row pb-5">
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans1" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <a >
@@ -55,7 +62,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans2" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <a >
@@ -75,7 +82,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans3" role="button" aria-expanded="false" aria-controls="collapseExample">
 
@@ -95,7 +102,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans4" role="button" aria-expanded="false" aria-controls="collapseExample">
 
@@ -114,7 +121,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans5" role="button" aria-expanded="false" aria-controls="collapseExample">
 
@@ -134,7 +141,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans6" role="button" aria-expanded="false" aria-controls="collapseExample">
 
@@ -155,7 +162,7 @@ const Faqs = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1">
+                        <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1" data-aos="fade-up">
                             <div>
                                 <div className="que" data-bs-toggle="collapse" href="#faqans7" role="button" aria-expanded="false" aria-controls="collapseExample">
 
