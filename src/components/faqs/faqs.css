@@ -1,58 +1,110 @@
-.que{
+.que {
     background-color: rgb(101, 96, 140);
     color: white;
     font-size: 18px;
     font-weight: 500;
-    padding: 18px;
+    padding: 18px 26px;
+    display: block;
+    position: relative;
 }
 
-.ans{
+.ans {
     background-color: rgb(225, 224, 235);
     padding: 18px;
     margin-bottom: 10px;
-    font-weight: 450 ;
-}
-/* 
-a{
-color: #282425!important;	
-}
-ul.nav.nav-tabs > li{
-	display: inline-block;
-	line-height: 50px;
-	height: 100%;
-	text-transform:uppercase;
-}
-ul.nav.nav-tabs > li a{
-	display:block;
-	padding:15px;
-	color: #282425!important;
-	
-}
-ul.nav.nav-tabs > li a:hover, ul.nav.nav-tabs > li:hover{
-	background:	#FB282F;
-	color:#fff!important;
-	text-decoration: none!important;
-}
-ul.nav.nav-tabs > li a.active{
-	background:	#282425;
-	color:#fff!important;
-	text-decoration: none!important;
-}
-.card-header {
-    background-color: rgb(245,245,245,0.3)!important;
-	border-radius:0!important;
-}
-.card{
-border-radius:0!important;
+    font-weight: 450;
 }
 
-.card > .card-header a::before {
-    font-family: fontawesome;
-    content: "\f067 ";
-    color: #282425;
+
+.que a {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-weight: 300;
+    line-height: 29px;
+    position: relative;
+}
+
+.que a:hover,
+.que a:active {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    color: #9a4a5a;
+}
+
+.bardiv {
     float: right;
-    margin-right: 15px;
-    font-weight: 400;
+}
+
+.que a span {
+    float: right;
+    margin-top: 0px;
+    margin-right: 0px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.que a .bar {
+    margin-top: 50%;
+    border-color: white;
+    border-width: 1.5px;
+    border-style: solid;
+    width: 25px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.que a .bar::after {
+    height: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    width: 25px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.que a .bar::after {
+    content: "";
+    height: 0;
     position: absolute;
-    right: 0;
-} */
+    top: 12.5px;
+    right: .5px;
+}
+
+.que a {
+    position: relative;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.que a .bar::after {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    border-color: white;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.que[aria-expanded="true"] .bar::after {
+    transform: rotate(180deg);
+
+}
+

@@ -29,7 +29,7 @@ const AboutusTeam = () => {
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card " style={{ width: "18rem" }}>
                             <div className="card-body p-0 imgWidth"  >
-                                <img src={gursewak} alt="Gursewak" className='imgWidth' />
+                                <img src={gursewak} alt="Gursewak Singh" className='imgWidth' />
                             </div>
                             <div className=' text-center py-2'>
                                 <h3>Gursewak Singh</h3>
@@ -40,7 +40,7 @@ const AboutusTeam = () => {
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card " style={{ width: "18rem" }}>
                             <div className="card-body p-0 imgWidth"  >
-                                <img src={parshant} alt="Gursewak" className='imgWidth' />
+                                <img src={parshant} alt="Parshant Khichi" className='imgWidth' />
                             </div>
                             <div className=' text-center py-2'>
                                 <h3>Parshant Khichi</h3>
@@ -51,7 +51,7 @@ const AboutusTeam = () => {
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card " style={{ width: "18rem" }}>
                             <div className="card-body p-0 imgWidth"  >
-                                <img src={balwinder} alt="Gursewak" className='imgWidth' />
+                                <img src={balwinder} alt="Balwinder Singh" className='imgWidth' />
                             </div>
                             <div className=' text-center py-2'>
                                 <h3>Balwinder Singh</h3>
@@ -62,7 +62,7 @@ const AboutusTeam = () => {
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card " style={{ width: "18rem" }}>
                             <div className="card-body p-0 imgWidth"  >
-                                <img src={akashdeep} alt="Gursewak" className='imgWidth' />
+                                <img src={akashdeep} alt="Akashdeep Singh" className='imgWidth' />
                             </div>
                             <div className=' text-center py-2'>
                                 <h3>Akashdeep Singh</h3>
@@ -73,7 +73,7 @@ const AboutusTeam = () => {
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card " style={{ width: "18rem" }}>
                             <div className="card-body p-0 imgWidth"  >
-                                <img src={lovish} alt="Gursewak" className='imgWidth' />
+                                <img src={lovish} alt="Lovish Bansal" className='imgWidth' />
                             </div>
                             <div className=' text-center py-2'>
                                 <h3>Lovish Bansal</h3>
