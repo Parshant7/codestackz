@@ -7,8 +7,8 @@ import './footer.css'
 import cszlogo from '/images/cszlogo.png'
 const Footer = () => {
 
-    useEffect(()=>{
-        AOS.init({duration:1000,once:"true"});
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: "true" });
     })
 
     return (
@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="col-sm-6 col-md-3 mb-3 mb-md-0">
                         <div className='mx-auto footerDivsCenter'>
                             <span className="h5">CodeStackZ</span>
-                            <ul style={{ padding: "10px 20px" }}>
+                            <ul style={{ padding: "10px 20px", }}>
                                 <li>Home</li>
                                 <li>Link</li>
                                 <li>Home</li>
@@ -29,7 +29,7 @@ const Footer = () => {
                         <div className='mx-auto footerDivsCenter' >
 
                             <span className="h5">Web Development</span>
-                            <ul className='' style={{ padding: "10px 20px" }}>
+                            <ul style={{ padding: "10px 20px" }}>
                                 <li>Custom Web</li>
                                 <li>NodeJs</li>
                                 <li>ReactJs</li>
