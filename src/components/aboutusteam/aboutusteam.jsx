@@ -22,7 +22,7 @@ const AboutusTeam = () => {
     return (
         <>
             <section>
-                <div className="text-center py-4 h2">
+                <div className="text-center py-4 h2 fw-bold">
                     Our Leadership
                 </div>
                 <div className="row justify-content-evenly  px-5 pb-5">

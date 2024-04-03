@@ -27,7 +27,7 @@ const NavBar = () => {
 
 
     // Clean up the event listener
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -72,20 +72,36 @@ const NavBar = () => {
                   <span className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
                   </span>
-                  <div className="dropdown-menu w-100 text-white servicesDropdownDiv" >
+                  <div className="dropdown-menu w-100 text-white servicesDropdownDiv ms-4 mb-4" >
                     <ul type='none' className="p-0">
-                      <li className="navLink cus">
-                        Web Development
-                      </li> 
-                      <li className="navLink">
-                        Mobile App Development
-                      </li>
-                      <li className="navLink">
-                        Web Maintenance
-                      </li>
-                      <li className="navLink">
-                        Web Consultancy
-                      </li>
+                      <div data-bs-dismiss="offcanvas" aria-label="Close">
+                        <Link to={'/services/webdevelopment'}>
+                          <li className="servicesNavLink">
+                            Web Development
+                          </li>
+                        </Link>
+                      </div>
+                      <div data-bs-dismiss="offcanvas" aria-label="Close">
+                        <Link to={'/services/webdevelopment'}>
+                          <li className="servicesNavLink">
+                            Mobile App Development
+                          </li>
+                        </Link>
+                      </div>
+                      <div data-bs-dismiss="offcanvas" aria-label="Close">
+                        <Link to={'/services/webdevelopment'}>
+                          <li className="servicesNavLink">
+                            Web Maintenance
+                          </li>
+                        </Link>
+                      </div>
+                      <div data-bs-dismiss="offcanvas" aria-label="Close">
+                        <Link to={'/services/webdevelopment'}>
+                          <li className="servicesNavLink">
+                            Web Consultancy
+                          </li>
+                        </Link>
+                      </div>
                     </ul>
                   </div>
                 </li>
@@ -94,7 +110,7 @@ const NavBar = () => {
                     <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
                   </div>
                 </li>
-                <li className="nav-item me-2 custombg">
+                <li className="nav-item me-2 custombg" >
                   <div data-bs-dismiss="offcanvas" aria-label="Close">
                     <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
                   </div>

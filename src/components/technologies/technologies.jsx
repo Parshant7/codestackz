@@ -20,7 +20,7 @@ const Technologies = () => {
         <>
             <section className="mb-3  technoDiv">
                 <div className="p-4 text-center">
-                    <h2 className="h2 "  data-aos="flip-right">Technologies We work with</h2>
+                    <h2 className="h2 fw-bold"  data-aos="flip-right">Technologies We work with</h2>
                 </div>
                 <div className="row p-4">
                     <div className="col-xl-9 col-lg-11 col-md-9  mx-auto">

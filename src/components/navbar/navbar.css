@@ -1,3 +1,8 @@
+.c {
+    --bs-offcanvas-bg: rgba(255, 255, 255, 0.1); /* Redefine the offcanvas background color */
+}
+
+
 #brandName{
     transition: 1s;
 }
@@ -26,7 +31,6 @@
 }
 .navLink:hover{
     color: white;
-    transform: scale(1.08);
 }
 
 
@@ -40,28 +44,56 @@
 
 @media screen and (max-width: 1199px) {
     .navLink{
-        color: white;
+        color: black;
         padding: 15px;
         padding-left: 30px;
-    }
-    .navLink:hover{
-        color: black;
-        font-weight: bold;
+        border-top: 1px solid black;
+        font-weight: 500;
     }
 
+    .navLink:active{
+        color: black;
+    }
+    /* .navLink:hover{
+        color: white;
+        font-weight: bold;
+    } */
+
     .custombg{
-     
-        background-color:#7e6ba4;
-        margin-bottom: 1px;
+        background-color: white;
         font-size: 20px;
     }
     .custombg:hover{
-        background-color: white;
+        background-color: black;
+        color:black;
     }
-    .customCanvas{
-        background-color: grey;
+
+    .custombg:hover .nav-link {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .servicesNavLink{
+        color: black;
+        padding: 15px;
+        padding-left: 30px;
+        border-top: 1px solid black;
+        font-weight: 500;
+
+    }
+    .servicesNavLink:hover{
+        cursor: pointer;
+    }
+
+    .servicesDropdownDiv{
+        background-color: white;
+        border: 0px;
+        border-radius: 0px;
+        padding: 0px;
+        margin-left: 20px;
     }
 }
+
 
 @media screen and (max-width: 450px) {
     .xxsHide{
@@ -75,8 +107,12 @@
         width: fit-content;
         min-width: 18rem;
         font-size: 16px;
-
     }
+
+    .navLink:hover{
+        transform: scale(1.08);
+    }
+    
 }
 
 ::-webkit-scrollbar {
