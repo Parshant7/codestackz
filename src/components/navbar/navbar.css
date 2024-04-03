@@ -50,7 +50,11 @@
         border-top: 1px solid black;
         font-weight: 500;
     }
-    
+
+    .navLinkContact{
+        border-bottom: 1px solid black;
+    }
+
     .navLink:active{
         color: black;
     }

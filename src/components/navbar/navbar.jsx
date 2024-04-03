@@ -110,7 +110,7 @@ const NavBar = () => {
                     <Link className="nav-link navLink" aria-current="page" to={'/aboutus'}>About us</Link>
                   </div>
                 </li>
-                <li className="nav-item me-2 custombg" style={{borderBottom:"1px solid black"}}>
+                <li className="nav-item me-2 custombg navLinkContact" >
                   <div data-bs-dismiss="offcanvas" aria-label="Close">
                     <Link className="nav-link navLink" to={'/contactus'}>Contact us</Link>
                   </div>
