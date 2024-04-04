@@ -34,10 +34,6 @@
 }
 
 
-.servicesDropdownDiv{
-    background-color: grey;
-}
-
 .custombg{
     min-width: fit-content;
 }
@@ -107,10 +103,24 @@
 
 @media screen and (min-width: 1200px) {
     .servicesDropdownDiv{
-        padding: 25px;
+        background-color: rgb(207, 229, 249);
+      padding: 0px;
         width: fit-content;
         min-width: 18rem;
         font-size: 16px;
+    }
+
+    .servicesNavLink{
+        color: black;
+        padding: 15px;
+        margin: 5px;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+    }
+
+    .servicesNavLinkWebConsult{
+        margin-bottom: 2px;
+        border-bottom: 0px;
     }
 
     .navLink:hover{
