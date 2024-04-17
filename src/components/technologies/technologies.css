@@ -1,4 +1,4 @@
-.technoDiv{
+.technoDiv {
     /* background-color: rgb(209, 236, 221); */
     background-color: #b6c9fe;
     color: black;
@@ -6,24 +6,67 @@
     padding-bottom: 20px;
 }
 
-.techCard{
+.techCard {
+    height: 100%;
     background-color: #3652AD;
     border-radius: 30px;
     width: fit-content;
-    height: fit-content;
+    /* height: fit-content; */
     padding: 45px 80px;
     margin: auto;
-    color:  white;
-    
+    color: white;
+
+}
+
+.techimg{
+    width: 90px;
 }
 
 @media screen and (min-width:1390px) {
-    .techCard{
+    .techCard {
         padding: 45px 110px;
     }
 }
+
 @media screen and (min-width:1580px) {
-    .techCard{
+    .techCard {
         padding: 45px 130px;
     }
+}
+
+
+@media screen and (max-width:575px) {
+    .col-xs-6-custom {
+        width: 50%;
+    }
+    .techCard {
+        padding: 30px 60px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .techCard {
+        padding: 20px 55px;
+    }
+    .techimg{
+        width: 55px;
+    }
+
+    .techCard span{
+        font-size: 15px;
+    }
+    .techcard-bs{
+        padding: 20px 47px;
+    }
+    .techcard-js{
+        padding: 20px 47px;
+    }
+    .techcard-js .techimg{
+        width: 50px;
+    }
+
+    .techcard-md{
+        padding: 20px 47px;
+    }
+    
 }

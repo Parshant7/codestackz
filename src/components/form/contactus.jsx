@@ -111,9 +111,9 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
     
-    if(grecaptcha.getResponse()==""){
-      return;
-    }
+    // if(grecaptcha.getResponse()==""){
+    //   return;
+    // }
 
     // alert("form is valid to submit.")
     setInputErr(prevState => ({ ...prevState, loading: "yes" }))
@@ -135,6 +135,11 @@ const ContactusForm = () => {
         if (response && response.status == 200) {
           setInputErr(prevState => ({ ...prevState, submitted: "Submitted Successfully." }))
           emptyErr();
+          nameRef.current.value=""
+          emailRef.current.value=""
+          contactRef.current.value=""
+          serviceTypeRef.current.value="none"
+          aboutProjectRef.current.value=""
           
         }
       } catch (err) {
