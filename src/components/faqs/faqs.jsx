@@ -8,8 +8,8 @@ const Faqs = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
-      })
-    
+    })
+
     // setTimeout(
     //     ()=>{
     //         const questions = document.querySelectorAll('.que');
@@ -31,7 +31,7 @@ const Faqs = () => {
     //         });
     //     }, 1000
     // )
-    
+
     return (
         <>
 
@@ -46,12 +46,22 @@ const Faqs = () => {
                             <div className="faqDiv">
                                 <div className="que" data-bs-toggle="collapse" href="#faqans1" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <a >
-                                        <div className='fw-bolder'>
-                                            Do you provide ongoing support after project completion?
-                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                Do you provide ongoing support after project completion?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        {/* <div className='fw-bolder'>
+                                            Do you provide ongoing support after project completion?
+                                            <div className='bardiv '>
+                                                <span className='bar'></span>
+                                            </div>
+                                        </div> */}
                                     </a>
                                 </div>
 
@@ -66,10 +76,14 @@ const Faqs = () => {
                             <div className="faqDiv">
                                 <div className="que" data-bs-toggle="collapse" href="#faqans2" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <a >
-                                        <div className='fw-bolder'>
-                                            How long does it take to complete a project?
-                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                How long does it take to complete a project?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -87,9 +101,13 @@ const Faqs = () => {
                                 <div className="que" data-bs-toggle="collapse" href="#faqans3" role="button" aria-expanded="false" aria-controls="collapseExample">
 
                                     <a >
-                                        <div className='fw-bolder'>
-                                            Can I request a custom service package?                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                Is it possible to request a customized service package?                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -107,9 +125,14 @@ const Faqs = () => {
                                 <div className="que" data-bs-toggle="collapse" href="#faqans4" role="button" aria-expanded="false" aria-controls="collapseExample">
 
                                     <a >
-                                        <div className='fw-bolder'>
-                                            What types of payment methods do you accept?                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                What types of payment methods do you accept?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -126,9 +149,14 @@ const Faqs = () => {
                                 <div className="que" data-bs-toggle="collapse" href="#faqans5" role="button" aria-expanded="false" aria-controls="collapseExample">
 
                                     <a >
-                                        <div className='fw-bolder'>
-                                            How do I get started with your services?                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                How do I get started with your services?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -146,10 +174,14 @@ const Faqs = () => {
                                 <div className="que" data-bs-toggle="collapse" href="#faqans6" role="button" aria-expanded="false" aria-controls="collapseExample">
 
                                     <a >
-                                        <div className='fw-bolder'>
-                                            How do you communicate and collaborate with you clients?
-                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                How do you communicate and collaborate with you clients?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>
@@ -167,10 +199,14 @@ const Faqs = () => {
                                 <div className="que" data-bs-toggle="collapse" href="#faqans7" role="button" aria-expanded="false" aria-controls="collapseExample">
 
                                     <a >
-                                        <div className='fw-bolder'>
-                                            How much does it cost to work with your agency?
-                                            <div className='bardiv d-none d-md-block'>
-                                                <span className='bar'></span>
+                                        <div className='row fw-bolder '>
+                                            <div className="col-md-11 customWidthQuestion">
+                                                How much does it cost to work with your agency?
+                                            </div>
+                                            <div className="col-md-1 customWidthBar">
+                                                <div className='bardiv d-flex align-items-center'>
+                                                    <span className='bar'></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </a>

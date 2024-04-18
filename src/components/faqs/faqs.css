@@ -109,10 +109,106 @@
 }
 
 
+@media screen and (max-width: 675px) {
 
+    .customWidthQuestion{
+        width: 90%;
+    }
+    .customWidthBar{
+        width: 10%;
+    }
+
+    .que a span {
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .que a .bar {
+        margin-top: 114%;
+        border-color: white;
+        border-width: 1.5px;
+        border-style: solid;
+        width: 25px;
+        border-radius: 10px;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .que a .bar::after {
+        height: 10px;
+        border-width: 1.5px;
+        border-style: solid;
+        width: 25px;
+        border-radius: 10px;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .que a .bar::after {
+        content: "";
+        height: 0;
+        position: absolute;
+        top: 28.5px;
+        right: .5px;
+    }
+
+    .que a {
+        position: relative;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .que a .bar::after {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        border-color: white;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .que[aria-expanded="true"] .bar::after {
+        transform: rotate(180deg);
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .customWidthQuestion{
+        width: 100%;
+    }
+    .customWidthBar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:674px) {
+    .customWidthQuestion{
+        width: 90%;
+    }
+    .customWidthBar{
+        width: 10%;
+        display: block;
+    }
+}
 
 @media screen and (max-width:575px) {
-    .faqDiv{
+    .faqDiv {
         width: 90%;
         margin: auto;
     }
