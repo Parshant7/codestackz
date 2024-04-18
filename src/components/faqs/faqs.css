@@ -199,10 +199,10 @@
 
 @media screen and (max-width:674px) {
     .customWidthQuestion{
-        width: 90%;
+        width: 87%;
     }
     .customWidthBar{
-        width: 10%;
+        width: 13%;
         display: block;
     }
 }
