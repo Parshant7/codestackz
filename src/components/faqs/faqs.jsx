@@ -10,34 +10,10 @@ const Faqs = () => {
         AOS.init({ duration: 1000 });
     })
 
-    // setTimeout(
-    //     ()=>{
-    //         const questions = document.querySelectorAll('.que');
-
-    //         questions.forEach(question => {
-    //             question.addEventListener('click', function () {
-    //                 // Close other expanded questions
-    //                 questions.forEach(otherQuestion => {
-    //                     if (otherQuestion !== question && otherQuestion.getAttribute('aria-expanded') === 'true') {
-    //                         otherQuestion.setAttribute('aria-expanded', 'false');
-    //                         const targetId = otherQuestion.getAttribute('href');
-    //                         const target = document.querySelector(targetId);
-    //                         console.log("fd");
-    //                         // target.classList.remove('show')
-    //                         target.classList.add('ansx');
-    //                     }
-    //                 });
-    //             });
-    //         });
-    //     }, 1000
-    // )
-
     return (
         <>
-
-
             <section className="bg-light">
-                <div className="text-center h2 p-4 pb-md-5">
+                <div className="text-center h2 faqheader">
                     Frequently Asked Questions
                 </div>
                 <div>

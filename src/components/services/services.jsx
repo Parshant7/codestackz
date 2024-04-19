@@ -29,7 +29,7 @@ const Services = () => {
 
     return (
         <>
-            <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
+            <div id='ourservices' className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
             </div>
             <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }} >

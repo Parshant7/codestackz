@@ -1,24 +1,41 @@
-.footerMain{
+.footerMain {
     background-color: rgb(205, 209, 236);
 }
 
-.footerBottom{
+.footerBottom {
 
     padding: 10px 30px;
 }
 
-.footerDivsCenter{
+.footerDivsCenter {
     width: fit-content;
 }
 
 @media screen and (max-width: 767px) {
-    .footerDivsCenter{
+    .footerMain {
+        text-align: center;
+    }
+
+    .footerDivsCenter {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .footerDivsCenter span{
+
+    .footerDivsCenter span {
         margin-bottom: 0px;
     }
-    
+
+}
+
+@media screen and (max-width: 370px) {
+
+    #footerBottomBrandname {
+        margin: auto;
+    }
+
+    #footberBottomSocial {
+        display: none;
+    }
+
 }

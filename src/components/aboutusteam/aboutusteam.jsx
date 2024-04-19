@@ -27,7 +27,7 @@ const AboutusTeam = () => {
                 </div>
                 <div className="row justify-content-evenly  px-5 pb-5">
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
-                        <div className="card " style={{ width: "18rem" }}>
+                        <div className="card imgCardWidth">
                             <div className="card-body p-0 imgWidth"  >
                                 <img src={gursewak} alt="Gursewak Singh" className='imgWidth' />
                             </div>
@@ -38,7 +38,7 @@ const AboutusTeam = () => {
                         </div>
                     </div>
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
-                        <div className="card " style={{ width: "18rem" }}>
+                        <div className="card imgCardWidth">
                             <div className="card-body p-0 imgWidth"  >
                                 <img src={parshant} alt="Parshant Khichi" className='imgWidth' />
                             </div>
@@ -49,7 +49,7 @@ const AboutusTeam = () => {
                         </div>
                     </div>
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
-                        <div className="card " style={{ width: "18rem" }}>
+                        <div className="card imgCardWidth">
                             <div className="card-body p-0 imgWidth"  >
                                 <img src={balwinder} alt="Balwinder Singh" className='imgWidth' />
                             </div>
@@ -60,7 +60,7 @@ const AboutusTeam = () => {
                         </div>
                     </div>
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
-                        <div className="card " style={{ width: "18rem" }}>
+                        <div className="card imgCardWidth">
                             <div className="card-body p-0 imgWidth"  >
                                 <img src={akashdeep} alt="Akashdeep Singh" className='imgWidth' />
                             </div>
@@ -71,7 +71,7 @@ const AboutusTeam = () => {
                         </div>
                     </div>
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
-                        <div className="card " style={{ width: "18rem" }}>
+                        <div className="card imgCardWidth">
                             <div className="card-body p-0 imgWidth"  >
                                 <img src={lovish} alt="Lovish Bansal" className='imgWidth' />
                             </div>
