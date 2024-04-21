@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 
 
 import './footer.css'
-import cszlogo from '/images/cszlogo.png'
+import cszlogo from '/images/cszlogo.webp'
 import { Link } from 'react-router-dom'
 const Footer = () => {
 
