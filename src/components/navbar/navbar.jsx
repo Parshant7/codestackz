@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos'
 
 import "./navbar.css"
-import cszlogo from '/images/cszlogo.png'
+import cszlogo from '/images/cszlogo.webp'
 const NavBar = () => {
 
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);

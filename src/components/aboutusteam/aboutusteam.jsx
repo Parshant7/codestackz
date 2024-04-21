@@ -1,8 +1,8 @@
-import gursewak from '/images/ourteam/gursewak.png'
-import parshant from '/images/ourteam/parshant.png'
-import balwinder from '/images/ourteam/balwinder.png'
-import akashdeep from '/images/ourteam/akashdeep.png'
-import lovish from '/images/ourteam/lovish.png'
+import gursewak from '/images/ourteam/gursewak.webp'
+import parshant from '/images/ourteam/parshant.webp'
+import balwinder from '/images/ourteam/balwinder.webp'
+import akashdeep from '/images/ourteam/akashdeep.webp'
+import lovish from '/images/ourteam/lovish.webp'
 
 import AOS from 'aos'
 

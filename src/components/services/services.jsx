@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-import webDImg from '/images/services/webD1.png'
-import appDImg from '/images/services/appD1.png'
-import webMImg from '/images/services/webM1.png'
-import webCImg from '/images/services/webC1.png'
+import webDImg from '/images/services/webD1.webp'
+import appDImg from '/images/services/appD1.webp'
+import webMImg from '/images/services/webM1.webp'
+import webCImg from '/images/services/webC1.webp'
+import logoDImg from '/images/services/logodesign.webp'
+
 
 
 import AOS from 'aos'
@@ -15,7 +17,7 @@ const Services = () => {
     useEffect(() => {
 
         const eles = document.getElementsByClassName('customCard');
-        
+
         Array.from(eles).forEach(ele => {
             ele.setAttribute("data-aos", "zoom-in-up");
             ele.setAttribute("data-aos-once", "true");
@@ -29,21 +31,22 @@ const Services = () => {
 
     return (
         <>
-            <div id='ourservices' className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
+            {/* id='ourservices' */}
+            <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
             </div>
             <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }} >
                 <div className="col-md-6 col-lg-4 mb-3">
                     {/* <Link to={'services/webdevelopment'}> */}
-                        <div className="card customCard">
-                            <div className='card-header bg-white border-0 d-flex align-items-center'>
-                                <img className="servicesIcon" src={webDImg} alt="" />
-                                <span className="h5 ms-4">Web Development</span>
-                            </div>
-                            <div className="card-body">
-                                <p>Our innovative web application development services are custom-built to meet the unique needs of businesses. Through the creation of responsive, user-friendly, and feature-rich web applications, we empower brands to enhance engagement and boost their online presence.</p>
-                            </div>
+                    <div className="card customCard">
+                        <div className='card-header bg-white border-0 d-flex align-items-center'>
+                            <img className="servicesIcon" src={webDImg} alt="" />
+                            <span className="h5 ms-4">Web Development</span>
                         </div>
+                        <div className="card-body">
+                            <p>Our innovative web application development services are custom-built to meet the unique needs of businesses. Through the creation of responsive, user-friendly, and feature-rich web applications, we empower brands to enhance engagement and boost their online presence.</p>
+                        </div>
+                    </div>
                     {/* </Link> */}
                 </div>
                 <div className="col-md-6 col-lg-4 mb-3">
@@ -76,6 +79,17 @@ const Services = () => {
                         </div>
                         <div className="card-body">
                             <p>Unlock the full potential of your online presence with our expert web consultation services. From in-depth assessments to tailored strategies, we provide invaluable insights to enhance your digital footprint. Let us guide you through the complexities of the web landscape and pave the way for your online success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6 col-lg-4 mb-3">
+                    <div className="card customCard">
+                        <div className='card-header bg-white border-0 d-flex align-items-center'>
+                            <img className="servicesIcon" src={logoDImg} alt="" />
+                            <span className="h5 ms-4">Logo Designing</span>
+                        </div>
+                        <div className="card-body">
+                            <p>Elevate your brand with our custom logo design services. Our talented team crafts unique and impactful logos tailored to your company's identity, ensuring you stand out in today's competitive market. Let us bring your vision to life and create a logo that leaves a lasting impression.</p>
                         </div>
                     </div>
                 </div>

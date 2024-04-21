@@ -1,4 +1,4 @@
-import carouselImg from '/images/cai5.jpeg'
+import carouselImg from '/images/cai5.webp'
 import { Link } from 'react-router-dom';
 import './carousel.css'
 const Carousel = () => {
@@ -23,8 +23,8 @@ const Carousel = () => {
                             <Link className='btn btn-lg btn-success border rounded-5 px-xl-5 px-lg-4 bg-white' style={{ color: "#FE7A36 " }} to={'/contactus'}>Seek a Consultation</Link>
                         </div>
                     </div>
-                    <div className="col-lg-6 p-0 d-none d-lg-block">
-                        <div className='' style={{ width: "100%", height: "100%", backgroundImage: `url(${carouselImg})`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
+                    <div className="col-lg-6 p-0 d-none d-lg-block ">
+                        <div className='' style={{ width: "70%", height: "100%", backgroundImage: `url(${carouselImg})`, backgroundSize: "cover",backgroundPositionX:"center", backgroundRepeat: "no-repeat"}}>
 
                         </div>
                     </div>

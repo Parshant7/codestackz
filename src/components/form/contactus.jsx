@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import contactusImg from '/images/cai4.jpeg'
+import contactusImg from '/images/cai4.webp'
 import Axios from 'axios'
 
 import AOS from 'aos'

@@ -6,6 +6,12 @@
     padding-bottom: 20px;
 }
 
+.techText{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .techCard {
     height: 100%;
     background-color: #3652AD;
@@ -41,6 +47,13 @@
     }
     .techCard {
         padding: 30px 60px;
+    }
+    .techText{
+        width: 85%;
+        font-size: 16px;
+        text-align: justify;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
 

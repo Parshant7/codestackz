@@ -1,11 +1,11 @@
-import htmlLogo from '/images/techs/html.png'
-import bootstrapLogo from '/images/techs/boots.png'
-import sqlLogo from '/images/techs/sql-server.png'
-import cssLogo from '/images/techs/css-3.png'
-import nodejsLogo from '/images/techs/nodejs.png'
-import mongoLogo from '/images/techs/mongo.png'
-import javascript from '/images/techs/javascript.png'
-import react from '/images/techs/react.png'
+import htmlLogo from '/images/techs/html.webp'
+import bootstrapLogo from '/images/techs/boots.webp'
+import sqlLogo from '/images/techs/sql-server.webp'
+import cssLogo from '/images/techs/css-3.webp'
+import nodejsLogo from '/images/techs/nodejs.webp'
+import mongoLogo from '/images/techs/mongo.webp'
+import javascript from '/images/techs/javascript.webp'
+import react from '/images/techs/react.webp'
 
 
 import AOS from 'aos'
@@ -24,6 +24,12 @@ const Technologies = () => {
       <section className="mb-3  technoDiv">
         <div className="p-4 text-center">
           <h2 className="h2 fw-bold" data-aos="flip-right">Technologies We work with</h2>
+        </div>
+        <div className="row fs-5">
+          <div className="col-xl-9 col-lg-11 col-md-9 col-sm-10 mx-auto techText">
+            <p className=''>We understand that technology in web development changes frequently, and it's important for businesses to utilize the latest tools. We stay up-to-date with the latest trends and technologies to offer creative web solutions. </p>
+            <p className='d-none d-md-block'>Our dedicated and experienced team works with a variety of tools such as HTML5, CSS, Bootstrap, JavaScript, React js, Node js, Angular, MERN, MEAN, UI/UX Design, WordPress, Shopify, Android, and more. All these technologies allow us to develop scalable websites and apps for our clients.</p>
+          </div>
         </div>
         <div className="row p-4">
           <div className="col-xl-9 col-lg-11 col-md-9  mx-auto">
@@ -47,7 +53,7 @@ const Technologies = () => {
               <div className="col-sm-6  col-md-6 col-lg-4  col-xs-6-custom  my-3 " data-aos="fade-left">
                 <div className='text-center  techCard techcard-bs'>
                   <div className='mb-3 mt-3'>
-                    <img src={bootstrapLogo} alt="" className="techimg"/>
+                    <img src={bootstrapLogo} alt="" className="techimg" />
                   </div>
                   <span className='h5'>Bootstrap</span>
                 </div>

@@ -2,13 +2,19 @@
     background-color: rgb(222, 216, 216);
     text-align: center;
     padding: 110px 40px;
-
 }
+
+#aboutusCarouselDiv p {
+    font-size: 20px;
+}
+
 
 #outer {
     background-color: rgb(222, 216, 216);
 
 }
+
+
 
 #inner {
     padding-top: 80px;
@@ -22,16 +28,21 @@
 
 }
 
+#leftDiv {
+    font-size: 19px !important;
+}
+
 #inner img {
     width: 100%;
     min-height: 480px;
     height: 480px;
-    background-size: contain;
-    background-position: bottom bottom;
+    object-fit: cover;
+    object-position: bottom bottom;
     border-top-right-radius: 900px 100px;
 }
 
-#inner img:hover,#inner .left:hover{
+#inner img:hover,
+#inner .left:hover {
     transform: scale(.985);
 }
 
@@ -47,6 +58,10 @@
 
 }
 
+#left p{
+    font-size: 19px;
+}
+
 @media screen and (max-width:1000px) {
 
     #inner {
@@ -56,7 +71,7 @@
         height: fit-content;
         border-top-left-radius: 900px 200px;
         border-top-right-radius: 900px 200px;
-    
+
     }
 
     #inner .left {
@@ -64,7 +79,6 @@
         margin: auto;
         border-top-left-radius: 500px 50px;
         border-top-right-radius: 500px 50px;
-
         padding: 20px 50px;
         height: fit-content;
         max-height: 10000px;
@@ -72,7 +86,7 @@
 
     }
 
-    #inner img {    
+    #inner img {
         width: 100%;
         min-height: 480px;
         height: 480px;
@@ -97,7 +111,26 @@
 
 
 @media screen and (max-width:500px) {
+
+    #aboutusCarouselDiv {
+        padding: 50px 40px;
+        /* font-size: */
+
+    }
+
+    #aboutusCarouselDiv h1 {
+        font-size: 26px;
+    }
+
+    #aboutusCarouselDiv p {
+        font-size: 16px;
+    }
+
+    #leftDiv {
+        font-size: 15px !important;
+    }
     
+
     #inner {
         padding-top: 18px;
         padding-inline: 15px;
@@ -106,7 +139,7 @@
         border-top-left-radius: 500px 50px;
         border-top-right-radius: 500px 50px;
         text-align: center;
-    
+
     }
 
 
@@ -116,7 +149,7 @@
         border-top-left-radius: 500px 50px;
         border-top-right-radius: 500px 50px;
 
-        padding: 20px 50px;
+        padding: 0px 50px;
         height: fit-content;
         max-height: 10000px;
         text-align: justify;
@@ -134,8 +167,9 @@
 
     }
 
-    #inner img:hover,#inner .left:hover{
+    #inner img:hover,
+    #inner .left:hover {
         transform: scale(1);
     }
-    
+
 }

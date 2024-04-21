@@ -1,8 +1,8 @@
-import chooseusimg1 from '/images/chooseus/investigation.png'
-import chooseusimg2 from '/images/chooseus/solution.png'
-import chooseusimg3 from '/images/chooseus/proof-of-concept.png'
-import chooseusimg4 from '/images/chooseus/customer-satisfaction.png'
-import chooseusimg5 from '/images/chooseus/continuous-improvement.png'
+import chooseusimg1 from '/images/chooseus/investigation.webp'
+import chooseusimg2 from '/images/chooseus/solution.webp'
+import chooseusimg3 from '/images/chooseus/proof-of-concept.webp'
+import chooseusimg4 from '/images/chooseus/customer-satisfaction.webp'
+import chooseusimg5 from '/images/chooseus/continuous-improvement.webp'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
